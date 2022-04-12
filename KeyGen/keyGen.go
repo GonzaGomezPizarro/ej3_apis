@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	url := "https://classify-web.herokuapp.com/api/keygen?length=32?symbols=1%0A%0A"
+	url := "https://classify-web.herokuapp.com/api/keygen?length=32?symbols=1"
 	method := "GET"
 
 	client := &http.Client{}
@@ -18,7 +18,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	req.Header.Add("", "")
+	//req.Header.Add("", "") // header vacio, no se usa.
 
 	res, err := client.Do(req)
 	if err != nil {
